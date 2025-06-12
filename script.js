@@ -20,6 +20,9 @@ tarefa.addEventListener('keypress', function(e){
 })
 1
 function criaTarefa(){
+    if (tarefa.value==""){
+        alert("Digite o nome da sua tarefa.")
+    } else{
     const listItem =document.createElement('li');
     listItem.textContent = tarefa.value;
     tasklist.appendChild(listItem);
@@ -52,4 +55,6 @@ function criaTarefa(){
     })
 
     tarefa.value=""
+    tarefa.focus()
+    }
 }
