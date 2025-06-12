@@ -14,6 +14,11 @@ titulo.innerHTML = `Lista de tarefa: ${nome}`;
 // Acompanha o evento de clique do botão adicionar tarefa
 btnadd.addEventListener("click",criaTarefa);
 
+// Envio com o enter
+tarefa.addEventListener('keypress', function(e){
+    if (e.key == 'Enter') criaTarefa();
+})
+1
 function criaTarefa(){
     const listItem =document.createElement('li');
     listItem.textContent = tarefa.value;
