@@ -3,11 +3,11 @@ const tarefa = document.getElementById('tarefa')
 const tasklist = document.getElementById('tasklist')
 const titulo = document.getElementById('titulo')
 
-let nome = prompt("qual o seu nome? ")
+let nome = prompt("Qual o seu nome? ")
 tarefa.focus()
 
 if(nome==""){
-    titulo.innerHTML = "lista de tarefa Genérica"
+    titulo.innerHTML = "Lista de tarefa genérica"
 }
 else{
     titulo.innerHTML =`Lista de tarefa: ${nome}`;
@@ -23,7 +23,7 @@ btnadd.addEventListener("click",criaTarefa);
 function criaTarefa(){
 
     if(tarefa.value == ""){
-        alert("Digite o nome da sua tarefa")
+        alert("Digite uma tarefa antes de adicionar.")
     }
     else{
 
